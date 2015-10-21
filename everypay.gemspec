@@ -2,7 +2,7 @@
 
 Gem::Specification.new do |s|
   s.name        = 'everypay'
-  s.version     = '1.0.0'
+  s.version     = '0.0.1'
   s.date        = '2015-10-21'
   s.summary     = 'Everypay api library for ruby.'
   s.description = 'Everypay payment gateway. See https://www.everypay.gr for details.'
@@ -12,10 +12,10 @@ Gem::Specification.new do |s|
   s.license     = 'MIT'
 
   s.add_dependency('rest-client', '~> 1.8')
-  s.add_dependency('json', '~> 1.8.3')
+  s.add_dependency('json', '~> 1.8')
 
   s.add_development_dependency('mocha', '~> 1.1')
-  s.add_development_dependency('test-unit')
+  s.add_development_dependency('test-unit', '~> 3.1')
   s.add_development_dependency('rake')
 
   s.files         = `git ls-files`.split("\n")
