@@ -1,3 +1,4 @@
 /everypay-*.gem
 /Gemfile.lock
 Gemfile.lock
+.vim.custom

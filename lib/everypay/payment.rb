@@ -4,21 +4,23 @@ module Everypay
 
   class Payment < Resource
 
-    def self.create payload
-      super
-    end
+    class << self
+      def create payload
+        super
+      end
 
-    def self.capture token
-      invoke(:put, {:namespace => 'capture', :token => token})
-    end
+      def capture token
+        invoke(:put, {:namespace => 'capture', :token => token})
+      end
 
-    def self.refund token, payload={}
-      payload.merge! :namespace => 'refund', :token => token
-      invoke :put, payload
-    end
+      def refund token, payload={}
+        payload.merge! :namespace => 'refund', :token => token
+        invoke :put, payload
+      end
 
-    def self.resource
-      'payments'
+      def resource
+        'payments'
+      end
     end
 
   end

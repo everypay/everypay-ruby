@@ -5,6 +5,7 @@ require 'json'
 
 require 'everypay/resource'
 require 'everypay/payment'
+require 'everypay/customer'
 
 module Everypay
 
