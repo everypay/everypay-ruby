@@ -39,7 +39,6 @@ module Everypay
         url = url + '/' + payload[:namespace] if payload[:namespace]
         url = url + '/' + payload.delete(:token) if payload[:token]
 
-        p url.inspect
         opts = {:method => method,
                 :verify_ssl => Everypay.verify_ssl,
                 :url => url,
