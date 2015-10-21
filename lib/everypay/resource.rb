@@ -17,11 +17,11 @@ module Everypay
     end
 
     def self.update token, payload
-      payload[:token] = token
+      payload.merge! :token => token
       invoke :put, payload
     end
 
-    def delete token
+    def self.delete token
       invoke :delete, {:token => token}
     end
 
@@ -34,7 +34,9 @@ module Everypay
 
     def self.invoke method, payload={}
       url = endpoint
+      url = url + '/' + payload[:namespace] if payload[:namespace]
       url = url + '/' + payload[:token] if payload[:token]
+
       opts = {:method => method,
               :verify_ssl => Everypay.verify_ssl,
               :url => url,

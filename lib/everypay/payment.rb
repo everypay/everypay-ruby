@@ -9,7 +9,12 @@ module Everypay
     end
 
     def self.capture token
-      invoke :put, {:token => token}
+      invoke(:put, {:namespace => 'capture', :token => token})
+    end
+
+    def self.refund token, payload={}
+      payload.merge! :namespace => 'refund', :token => token
+      invoke :put, payload
     end
 
     def self.resource
