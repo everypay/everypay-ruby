@@ -3,9 +3,11 @@
 require 'rest-client'
 require 'json'
 
+require 'everypay/errors/not_available_method_error'
 require 'everypay/resource'
 require 'everypay/payment'
 require 'everypay/customer'
+require 'everypay/token'
 
 module Everypay
 
