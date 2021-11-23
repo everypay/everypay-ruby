@@ -2,3 +2,5 @@
 /Gemfile.lock
 Gemfile.lock
 .vim.custom
+/vendor
+.bundle/
